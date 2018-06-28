@@ -1,5 +1,6 @@
 var languagesArrayCreation = function () {
 var languages = [ 'Html', 'CSS', 'Java', 'PHP' ];
+//Autre possibilité : var languages = new Array('HTML', 'CSS', 'Java', 'PHP');
   return languages;
 }
 
@@ -19,7 +20,7 @@ languages.push('Ruby', 'Python');
 }
 
 var AddElementToNumbersArray = function (numbers) {
-numbers.splice(0, 0, -2, -1);
+numbers.unshift(-2, -1);
   return numbers;
 }
 
@@ -34,13 +35,14 @@ languages.pop();
 }
 
 var stringToArray = function (socialMediaInString) {
-
-  return socialMediaInString.split(',');
+var socialMedia = socialMediaInString.split(',')
+  return socialMedia;
 }
 
 var arrayToString = function (languages) {
-
-  return languages.toString();
+var languagesInString = languages.join(',')
+// Autre possibilité : var languagesInString = languages.toString();
+  return languagesInString;
 }
 
 var arraySort = function (socialMedia) {
@@ -49,7 +51,6 @@ var arraySort = function (socialMedia) {
 }
 
 var arrayInvert = function (socialMedia){
-
 
   return socialMedia.reverse();
 }
